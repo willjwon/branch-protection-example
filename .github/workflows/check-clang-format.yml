@@ -1,0 +1,16 @@
+name: Check Code Formatting using clang-format
+
+on: [ push, pull_request ]
+
+jobs:
+  check-code-formatting:
+    name: Check Code Formatting
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v3
+
+    - name: Check format of `src` directory
+      uses: jidicula/clang-format-action@v4.11.0
+      with:
+        check-path: 'src'
