@@ -13,4 +13,5 @@ jobs:
     - name: Check format of `src` directory
       uses: jidicula/clang-format-action@v4.11.0
       with:
+        clang-format-version: '18'
         check-path: 'src'
